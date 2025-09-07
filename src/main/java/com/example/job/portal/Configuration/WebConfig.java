@@ -15,7 +15,9 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**") // Allow all paths
-                        .allowedOrigins("http://localhost:5173") // Update with your frontend's URL
+                        .allowedOrigins("http://localhost:5173",
+                                "https://job-portal-frontend-red-rho.vercel.app",
+                                "https://job-portal-frontend-dbcqg8cep-abinayab0311s-projects.vercel.app") // Update with your frontend's URL
                         .allowedMethods("GET", "POST", "PUT","PATCH", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
