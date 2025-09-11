@@ -35,11 +35,11 @@ public class AuthController {
         return response;
     }
 
-    @PostMapping("register-employer")
+    @PostMapping("/register-employer") //changed /
     public ResponseEntity<String> registerEmployer(@Valid @RequestBody UserDto userDto) {
         return authService.registerEmployer(userDto);
     }
-    @PostMapping("register-admin")
+    @PostMapping("/register-admin") // changed /
     public ResponseEntity<String> registerAdmin(@Valid @RequestBody UserDto userDto) {
         return authService.registerAdmin(userDto);
     }
